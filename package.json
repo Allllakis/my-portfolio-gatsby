@@ -20,6 +20,7 @@
     "gatsby-plugin-react-helmet": "^4.14.0",
     "gatsby-plugin-sharp": "^3.14.0",
     "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-source-strapi": "^1.0.2",
     "gatsby-transformer-sharp": "^3.14.0",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",

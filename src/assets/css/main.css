@@ -230,6 +230,8 @@ Navbar
 }
 .nav-header img {
   margin-bottom: 0.375rem;
+  height: 4rem;
+  width: 4rem;
 }
 .toggle-btn {
   font-size: 2rem;
