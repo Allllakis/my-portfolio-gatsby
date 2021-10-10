@@ -4,6 +4,9 @@ import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 
 import "../assets/css/main.css"
+import "semantic-ui-css/semantic.min.css"
+
+
 const Layout = ({ children }) => {
 
   const [isOpen, setIsOpen] = useState(false)
