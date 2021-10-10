@@ -189,11 +189,14 @@ p {
 /* social links */
 .social-links {
   margin-top: 2rem;
-  width: 15rem;
+  width: 10rem;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
+  
 }
 .social-link {
+  margin-right: 3rem;
   font-size: 1.75rem;
   color: var(--clr-grey-1);
   transition: var(--transition);
