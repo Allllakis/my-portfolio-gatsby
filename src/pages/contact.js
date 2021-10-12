@@ -32,27 +32,30 @@ const contact = () => {
         <div className="section-center contact-center">
           
           <article className="contact-form">
+            <div className="heading">
             <h3>get in touch</h3>
-            <form onSubmit={sendEmail}>
+            </div>
+            
+            <form className="form-items" onSubmit={sendEmail}>
               <div className="form-group">
-                <label className="form-label">Name</label>
+                {/* <label className="form-label">Name</label> */}
                 <input
                   type="text"
                   name="from_name"
-                  // placeholder="name"
+                   placeholder="name"
                   className="form-control"
                 />
-                <label className="form-label">Email</label>
+                {/* <label className="form-label">Email</label> */}
                 <input
                   type="email"
                   name="email"
-                  // placeholder="email"
+                   placeholder="email"
                   className="form-control"
                 />
-                <label className="form-label">Message</label>
+                {/* <label className="form-label">Message</label> */}
                 <textarea
                   name="message"
-                  // placeholder="message"
+                   placeholder="message"
                   rows="5"
                   className="form-control"
                 ></textarea>
@@ -63,7 +66,7 @@ const contact = () => {
             </form>
           </article>
           <StaticImage
-            src="../assets/images/reading.svg"
+            src="../assets/images/reading1.svg"
             alt="portfolio"
             className="contact-img"
             placeholder="blurred"

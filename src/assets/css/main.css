@@ -128,7 +128,7 @@ p {
 
 .btn {
   text-transform: uppercase;
-  background: var(--clr-primary-5);
+  background: #ffd018;
   color: var(--clr-primary-9);
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
@@ -997,15 +997,32 @@ Contact Page
     /* grid-row: 1/1;
     grid-column: 2 / span 9; */
   }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotateZ(0);
+    }
+    50% {
+      transform: rotateZ(-0.5deg);
+    }
+    100% {
+      transform: rotateZ(0.5deg);
+    }
+  }
   .contact-img {
+    animation: wiggle 1s infinite alternate;
     display: block;
     grid-row: 1/1;
     grid-column: 2/8;
-    box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25); */
     /* grid-row: 1/1;
     grid-column: 7/-1; */
   }
+
+  
   .contact-img-svg {
+    
+    /* animation: go-left-right 3s infinite alternate; */
     width: 100%;
     position: relative;
     display: block;
@@ -1031,42 +1048,65 @@ Contact Page
   grid-column: 1 / span 8;
 } */
 .contact-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* justify-content: flex-end; */
+  /* align-items: center; */
+  align-items: flex-end;
+ 
+ 
   background: var(--clr-white);
   border-radius: 1rem;
-  text-align: center;
+  /* text-align: center;
   box-shadow: var(--light-shadow);
-  transition: var(--transition);
+  transition: var(--transition); */
   width: 90vw;
-  max-width: 35rem;
+  max-width: 45rem;
   box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
 }
 .contact-form:hover {
   box-shadow: var(--dark-shadow);
 }
+.heading {
+  width: 35rem;
+  text-align: center;
+}
 .contact-form h3 {
+  font-weight: bold;
   padding-top: 1.25rem;
-  color: var(--clr-primary-5);
+  color: #ffd018;
 }
 .form-group {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 1rem 1.5rem;
 }
+
+/* .form-group input {
+  height: 3.3rem;
+  width: 31.4rem;
+} */
 .form-label {
   text-transform: uppercase;
 }
 .form-control {
-  display: block;
+  /* display: block; */
   width: 100%;
   padding: 0.75rem 1rem;
-  border: none;
+  border: 1px solid hsl(210, 31%, 80%);;
+  /* border: none; */
   margin-bottom: 1.25rem;
-  background: var(--clr-grey-10);
+  /* background: #e4ddc1; */
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
 .form-control::placeholder {
   font-family: var(--ff-primary);
-  color: var(--clr-grey-1);
+  color: hsl(210, 31%, 80%);
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
