@@ -8,7 +8,7 @@ const Navbar = ({toggleSidebar}) => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <h1>ONLY WEB</h1>
+          {/* <h1>ONLY WEB</h1> */}
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight />
           </button>

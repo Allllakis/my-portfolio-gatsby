@@ -56,7 +56,7 @@ const contact = () => {
                 <textarea
                   name="message"
                    placeholder="message"
-                  rows="5"
+                  rows="8"
                   className="form-control"
                 ></textarea>
               </div>
@@ -80,32 +80,3 @@ const contact = () => {
 
 export default contact
 
-//  const contact = () => {
-
-//   const sendEmail = (event) => {
-//     event.preventDefault();
-
-//     emailjs.sendForm('service_fx6illa', 'template_wzgwu2l', event.target, 'user_Oq3qithOe5bmZ8ccdIMOT')
-//       .then((result) => {
-//           console.log(result.text);
-//       }, (error) => {
-//           console.log(error.text);
-//       });
-//      event.target.reset()
-//   };
-
-//   return (
-//     <form  onSubmit={sendEmail}>
-//       <label>Name</label>
-//       <input type="text" name="from_name" />
-//       <label>Email</label>
-//       <input type="email" name="email" />
-
-//       <label>Message</label>
-//       <textarea name="message" />
-//       <input type="submit" value="Send" />
-//     </form>
-//   );
-// };
-
-// export default contact
