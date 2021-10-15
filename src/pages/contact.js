@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useRef } from "react"
 import Seo from "../components/Seo"
 import emailjs from "emailjs-com"
 import { StaticImage } from "gatsby-plugin-image"
 
-const contact = () => {
+const Contact = () => {
+  const form = useRef()
+
   const sendEmail = event => {
     event.preventDefault()
 
@@ -11,7 +13,7 @@ const contact = () => {
       .sendForm(
         "service_fx6illa",
         "template_wzgwu2l",
-        event.target,
+        form.current,
         "user_Oq3qithOe5bmZ8ccdIMOT"
       )
       .then(
@@ -27,56 +29,125 @@ const contact = () => {
 
   return (
     <>
-      <section className="contact">
-        {/* <div className="contact"> */}
-        <div className="section-center contact-center">
-          
-          <article className="contact-form">
-            <div className="heading">
-            <h3>get in touch</h3>
+      <section className="contact-page">
+        <div className="form-wrapper">
+        <article className="contact-form">
+          <h3>get in touch</h3>
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="form-group">
+              <input
+                type="text"
+                name="from_name"
+                placeholder="name"
+                className="form-control"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="email"
+                className="form-control"
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="message"
+                className="form-control"
+              ></textarea>
             </div>
-            
-            <form className="form-items" onSubmit={sendEmail}>
-              <div className="form-group">
-                {/* <label className="form-label">Name</label> */}
-                <input
-                  type="text"
-                  name="from_name"
-                   placeholder="name"
-                  className="form-control"
-                />
-                {/* <label className="form-label">Email</label> */}
-                <input
-                  type="email"
-                  name="email"
-                   placeholder="email"
-                  className="form-control"
-                />
-                {/* <label className="form-label">Message</label> */}
-                <textarea
-                  name="message"
-                   placeholder="message"
-                  rows="8"
-                  className="form-control"
-                ></textarea>
-              </div>
-              <button type="submit" className="submit-btn btn">
-                subnit here
-              </button>
-            </form>
-          </article>
-          <StaticImage
-            src="../assets/images/reading1.svg"
-            alt="portfolio"
-            className="contact-img"
-            placeholder="blurred"
-          />
+            <button type="submit" className="submit-btn btn">
+              submit here
+            </button>
+          </form>
+        </article>
         </div>
-        {/* </div> */}
+        <StaticImage
+        src="../assets/images/reading1.svg"
+        alt="portfolio"
+        className="contact-img"
+        placeholder="blurred"
+      />
       </section>
+     
     </>
   )
 }
 
-export default contact
+export default Contact
 
+// const Contact = () => {
+
+//   const form = useRef();
+
+//   const sendEmail = event => {
+//     event.preventDefault()
+
+//     emailjs.sendForm(
+//         "service_fx6illa",
+//         "template_wzgwu2l",
+//         form.current,
+//         "user_Oq3qithOe5bmZ8ccdIMOT"
+//       )
+//       .then(
+//         result => {
+//           console.log(result.text)
+//         },
+//         error => {
+//           console.log(error.text)
+//         }
+//       )
+//     event.target.reset()
+//   }
+
+//   return (
+//     <>
+//       <section className="contact">
+
+//         <div className="section-center contact-center">
+//           <article className="contact-form">
+//             <div className="heading">
+//               <h3>get in touch</h3>
+//             </div>
+
+//             <form ref={form} onSubmit={sendEmail}>
+//               <div className="form-group">
+
+//                 <input
+//                   type="text"
+//                   name="from_name"
+//                   // placeholder="name"
+//                   className="form-control"
+//                 />
+
+//                 <input
+//                   type="email"
+//                   name="email"
+//                   // placeholder="email"
+//                   className="form-control"
+//                 />
+
+//                 <textarea
+//                   name="message"
+//                   // placeholder="message"
+//                   rows="8"
+//                   className="form-control"
+//                 ></textarea>
+//               </div>
+//               <button type="submit" className="submit-btn btn" onClick={() => console.log("tretre")}>
+//                 subnit here
+//               </button>
+//             </form>
+//           </article>
+//           {/* <StaticImage
+//             src="../assets/images/reading1.svg"
+//             alt="portfolio"
+//             className="contact-img"
+//             placeholder="blurred"
+//           /> */}
+//         </div>
+
+//       </section>
+//     </>
+//   )
+// }
+
+// export default Contact
