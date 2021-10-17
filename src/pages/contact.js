@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import Seo from "../components/Seo"
 import emailjs from "emailjs-com"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 const Contact = () => {
   const form = useRef()
@@ -31,41 +31,48 @@ const Contact = () => {
     <>
       <section className="contact-page">
         <div className="form-wrapper">
+          <div className="form-img">
         <article className="contact-form">
           <h3>get in touch</h3>
           <form ref={form} onSubmit={sendEmail}>
             <div className="form-group">
+            <label for="from_name">Name and surname</label>
               <input
                 type="text"
                 name="from_name"
-                placeholder="name"
+                // placeholder="name"
                 className="form-control"
               />
+              <label for="email">Email</label>
               <input
                 type="email"
                 name="email"
-                placeholder="email"
+                // placeholder="email"
                 className="form-control"
               />
+              <label for="massage">Please enter your massage</label>
               <textarea
                 name="message"
                 rows="5"
-                placeholder="message"
+                // placeholder="message"
                 className="form-control"
               ></textarea>
             </div>
+            <div className="wrapper-btn">
             <button type="submit" className="submit-btn btn">
               submit here
             </button>
+            </div>
           </form>
         </article>
         </div>
-        <StaticImage
+        </div>
+        {/* <StaticImage
         src="../assets/images/reading1.svg"
         alt="portfolio"
         className="contact-img"
         placeholder="blurred"
-      />
+      /> */}
       </section>
      
     </>
