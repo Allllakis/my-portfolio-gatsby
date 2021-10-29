@@ -6,7 +6,12 @@
 
 module.exports = {
   /* Your site config here */
-
+siteMetadata:{
+  title:`My Portfolio`,
+  description:`Awensome My Portfolio built with Gatsby and Strapi`,
+  titleTemplate:`%s | My Portfolio`,
+  url:`https://youthful-my-portfolio-8e816a.netlify.app`
+},
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
