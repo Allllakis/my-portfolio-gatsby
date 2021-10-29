@@ -7,6 +7,8 @@ const About = ({ data }) => {
   const { strapiAbout: { title, info, stack, image }} = data
   return (
     <>
+    <Seo title="About"/>
+
       <section className="about-page">
         <div className="section-center about-center">
           <img

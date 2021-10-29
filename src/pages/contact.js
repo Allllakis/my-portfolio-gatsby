@@ -29,6 +29,7 @@ const Contact = () => {
 
   return (
     <>
+    <Seo title="Contact"/>
       <section className="contact-page">
         <div className="form-wrapper">
           <div className="form-img">
@@ -40,21 +41,18 @@ const Contact = () => {
               <input
                 type="text"
                 name="from_name"
-                // placeholder="name"
                 className="form-control"
               />
               <label for="email">Email</label>
               <input
                 type="email"
                 name="email"
-                // placeholder="email"
                 className="form-control"
               />
               <label for="massage">Please enter your massage</label>
               <textarea
                 name="message"
                 rows="5"
-                // placeholder="message"
                 className="form-control"
               ></textarea>
             </div>
